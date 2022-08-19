@@ -20,7 +20,7 @@ else:
 # ******************************** CONFIGURING DEFAULT SENDING CHANNEL USING COMMANDS *********************************#
 @Client.on_message(filters.private & filters.command(["channel1"]))
 async def channel1(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id==Config.AUTH_USERS:
         await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
         a = await update.reply_text(text=Translation.NOT_AUTH_TXT)
         time.sleep(5)
@@ -46,7 +46,7 @@ async def channel1(bot, update):
 # ---------------------------------------------------------------------------------------------------------------------#
 @Client.on_message(filters.private & filters.command(["channel2"]))
 async def channel2(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id==Config.AUTH_USERS:
         await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
         a = await update.reply_text(text=Translation.NOT_AUTH_TXT)
         time.sleep(5)
@@ -72,7 +72,7 @@ async def channel2(bot, update):
 # ---------------------------------------------------------------------------------------------------------------------#
 @Client.on_message(filters.private & filters.command(["channel3"]))
 async def channel3(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id==Config.AUTH_USERS:
         await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
         a = await update.reply_text(text=Translation.NOT_AUTH_TXT)
         time.sleep(5)
@@ -98,7 +98,7 @@ async def channel3(bot, update):
 # ---------------------------------------------------------------------------------------------------------------------#
 @Client.on_message(filters.private & filters.command(["channel4"]))
 async def channel4(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id==Config.AUTH_USERS:
         await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
         a = await update.reply_text(text=Translation.NOT_AUTH_TXT)
         time.sleep(5)
@@ -124,7 +124,7 @@ async def channel4(bot, update):
 # ---------------------------------------------------------------------------------------------------------------------#
 @Client.on_message(filters.private & filters.command(["channel5"]))
 async def channel5(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id==Config.AUTH_USERS:
         await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
         a = await update.reply_text(text=Translation.NOT_AUTH_TXT)
         time.sleep(5)
@@ -150,7 +150,7 @@ async def channel5(bot, update):
 # *********************************** TO VIEW THE DEFAULT SENDING CHANNEL *********************************************#
 @Client.on_message(filters.private & filters.command(["view"]))
 async def view(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id==Config.AUTH_USERS:
         await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
         await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
         a = await update.reply_text(text=Translation.NOT_AUTH_TXT)
@@ -171,7 +171,7 @@ async def view(bot, update):
 # ************************************** List All the channels attached to bot ****************************************#
 @Client.on_message(filters.private & filters.command(["list"]))
 async def list_channels(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id==Config.AUTH_USERS:
         await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
         await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
         a = await update.reply_text(text=Translation.NOT_AUTH_TXT)
@@ -189,7 +189,7 @@ async def list_channels(bot, update):
 # ************************************** SEND A FILE TO THE CONFIGURED CHANNEL ****************************************#
 @Client.on_message(filters.private & filters.command(["send"]))
 async def forward(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id==Config.AUTH_USERS:
         await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
         await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
         a = await update.reply_text(text=Translation.NOT_AUTH_TXT)
