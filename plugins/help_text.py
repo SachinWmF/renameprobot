@@ -38,7 +38,7 @@ async def bot_settings(bot, update):
             [
                 [InlineKeyboardButton("View Thumb", callback_data="view_thumb"),
                  InlineKeyboardButton("Del Thumb", callback_data="conf_thumb")],
-                [InlineKeyboardButton("Help", callback_data="start_help"),
+                [InlineKeyboardButton("Help", callback_data="st_help"),
                  InlineKeyboardButton("Close", callback_data="close")]
             ])
     )
